@@ -3,8 +3,21 @@ console.log("Content script running");
 // Check if the current URL contains "catalog.ucsc.edu"
 if (window.location.href.indexOf("catalog.ucsc.edu") !== -1) {
   console.log("You are on the right page. Sending message to background script...");
-  // Send a message to the background script to initiate further actions
-  chrome.runtime.sendMessage({ message: "check_url" });
+  const params = new URLSearchParams(
+    {param_name: window.location.href}
+    )
+
+  fetch('http://127.0.0.1:5000/run_python_script?' + params)
+  .then(response => {
+    console.log(response)
+    return response.json()
+  })
+  .then(result => {
+    console.log(result);
+    // You can handle the result as needed
+  })
+  .catch(error => console.error('Error executing Python script:', error));
+
 } else {
   console.log("You are not on the right page");
 }
