@@ -51,7 +51,7 @@ def run(url):
                     index += 1   
             if(index == 10):
                 break
-
+        
         return prof_stats
     else:
         print(f"Failed to retrieve the webpage. Status Code: {response.status_code}")

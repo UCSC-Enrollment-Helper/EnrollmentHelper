@@ -14,3 +14,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 //chrome.runtime.sendMessage({type: "result", data: resu})
 */
+chrome.storage.onChanged.addListener(function(changes) {
+  if (changes.popupState) {
+    // Do something with the updated popup state
+    const updatedPopupState = changes.popupState.newValue;
+    // ...
+  }
+});

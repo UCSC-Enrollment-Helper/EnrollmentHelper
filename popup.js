@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         list = []
         for(let i = 0; i < instructors.length - 1;i++)
         {
-            list.push(instructors[i].split("\n"))
+            list.push(instructors[i].split("\n"));
         }
         for(let ls of list)
         {
@@ -18,10 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
             for (let attr of ls)   //looking at specific attribute to each professor
             {
                 profAttr = document.createElement("div")
+                profAttr.classList.add('section')
+
                 profAttr.innerHTML = attr
                 profTab.appendChild(profAttr)
-            }
+            }   
             mainDiv.appendChild(profTab)
+        }
+
+        sectionList = document.getElementsByClassName("section")
+        for(let di of sectionList)
+        {
+            if(di.innerHTML.length === 0)
+            {
+                di.remove()
+            }
         }
 
         
@@ -56,9 +67,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         */
         // Optional: Clear the storage after retrieving the data
-        chrome.storage.local.remove("key", function() {
-          console.log("Data removed from storage");
-        });
+        // chrome.storage.local.remove("key", function() {
+        //   console.log("Data removed from storage");
+        // });
       }
     });
   });
+
+  function savePopupState() {
+    const popupState = {}; // Add any necessary state data
+  
+    chrome.storage.local.set({ "popupState": popupState }, function() {
+      console.log("Popup state saved");
+    });
+  }
+  
+  // Save the popup state when the popup is closed
+  window.addEventListener('beforeunload', savePopupState);

@@ -27,6 +27,7 @@ h1:hover, h2:hover {
 }
 */
 .professors {
+    font-size: large;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Center alignment for all content */
@@ -39,6 +40,7 @@ h1:hover, h2:hover {
 
 /* Common styles for the sections */
 .section {
+    
     width: calc(100% - 2.5rem); /* Full width accounting for padding (40px converted to rem) */
     background: rgba(255, 255, 255, 0.1); /* Slight white transparency for contrast */
     padding: 1.25rem; /* Padding inside sections (15px converted to rem) */
