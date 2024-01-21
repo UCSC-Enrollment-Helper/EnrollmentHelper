@@ -1,22 +1,15 @@
 /* style.css */
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'ABeeZee', sans-serif;
     background-color: #322968; /* Dark purple background */
     color: #ffffff; /* Light text for readability */
-    height: 40rem; /* Full height of the popup */
-    width: 30rem; /* Full width of the popup */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Center alignment for all content */
-    padding: 20px; /* Padding inside the popup */
-    box-sizing: border-box; /* Prevents padding from expanding beyond the set width and height */
-    border-radius: 10px; /* Rounded corners for the popup */
-    overflow: hidden; /* Ensures nothing spills out the rounded corners */
+    height: 40rem; /* Height of the popup */
+    width: 30rem; /* Width of the popup */
 }
 
 h1, h2 {
-    color: #02B875; /* A shade of green for headings */
+    color: #f2f2f2; /* A shade of green for headings */
     margin: 0.5em 0; /* Spacing above and below headings */
 }
 
@@ -25,22 +18,33 @@ h1 {
     text-align: center; /* Center the main title */
 }
 
-/* Hover effect for headings */
+/* Hover effect for headings
 h1:hover, h2:hover {
-    color: #4FFFB0; /* Lighter shade of green for hover */
-    cursor: pointer; /* Changes cursor to indicate interactivity */
-    text-decoration: underline; /* Underlines text on hover */
-    transition: color 0.3s ease; /* Smooth transition for the color change */
+    color: #4FFFB0; // Lighter shade of green for hover
+    cursor: pointer; // Changes cursor to indicate interactivity
+    text-decoration: underline; // Underlines text on hover
+    transition: color 0.3s ease; // Smooth transition for the color change
+}
+*/
+.professors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Center alignment for all content */
+    padding: 1.25rem; /* Padding inside the popup (20px converted to rem) */
+    box-sizing: border-box; /* Prevents padding from expanding beyond the set width and height */
+    border-radius: 1rem; /* Rounded corners for the popup (10px converted to rem) */
+    overflow: hidden; /* Ensures nothing spills out the rounded corners */
+    border-top: 0.1875rem solid #1d1d1d; /* Thin black line above each section (3px converted to rem) */
 }
 
 /* Common styles for the sections */
 .section {
-    width: calc(100% - 40px); /* Full width accounting for padding */
+    width: calc(100% - 2.5rem); /* Full width accounting for padding (40px converted to rem) */
     background: rgba(255, 255, 255, 0.1); /* Slight white transparency for contrast */
-    padding: 15px; /* Padding inside sections */
-    margin-bottom: 10px; /* Spacing between sections */
-    border-radius: 5px; /* Rounded corners for sections */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 1.25rem; /* Padding inside sections (15px converted to rem) */
+    margin-bottom: 0.625rem; /* Spacing between sections (10px converted to rem) */
+    border-radius: 0.3125rem; /* Rounded corners for sections (5px converted to rem) */
+    box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.5); /* Subtle shadow for depth (2px and 5px converted to rem) */
 }
 
 /* Styles for the "rating" and "reviews" sections */
@@ -49,17 +53,19 @@ h1:hover, h2:hover {
 }
 
 /* Additional styling for individual review paragraphs */
-.reviews p {
+.reviews h3 {
     background-color: #3f3a60; /* Darker background for each review */
-    padding: 10px; /* Padding for review text */
-    margin: 5px 0; /* Spacing between reviews */
-    border-radius: 3px; /* Rounded corners for review blocks */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); /* Inset shadow for a "pressed" effect */
+    padding: 0.625rem; /* Padding for review text (10px converted to rem) */
+    margin: 0.3125rem 0; /* Spacing between reviews (5px converted to rem) */
+    border-radius: 0.1875rem; /* Rounded corners for review blocks (3px converted to rem) */
+    box-shadow: inset 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3); /* Inset shadow for a "pressed" effect (1px, 3px converted to rem) */
     transition: background-color 0.3s ease; /* Smooth transition for background color change */
 }
 
 /* Hover effect for individual reviews */
-.reviews p:hover {
+.reviews h3:hover {
     background-color: #504b70; /* Lighter purple background on hover */
     cursor: pointer; /* Changes cursor to indicate interactivity */
 }
+
+

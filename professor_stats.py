@@ -11,7 +11,6 @@ def findStats(name, ind):
     professor = ratemyprofessor.get_professor_by_school_and_name(ratemyprofessor.get_school_by_name("UCSC"), name)
 
     if professor is not None:
-        statStr += f"Instructor: {ind}\n"
         statStr += f"{professor.name} works in the {professor.department} Department of {professor.school.name}.\n"
         statStr += f"Rating: {professor.rating} / 5.0\n"
         statStr += f"Difficulty: {professor.difficulty} / 5.0\n"
@@ -44,11 +43,11 @@ def run(url):
             nameList = prof_names.split(',')
             print(nameList)
             if(len(nameList) == 1):
-                prof_stats = prof_stats + findStats(nameList[0], index) + "\n"
+                prof_stats = prof_stats + findStats(nameList[0], index) + "!\n"
                 index += 1
             else:
                 for name in nameList:
-                    prof_stats = prof_stats + findStats(name, index) + "\n"
+                    prof_stats = prof_stats + findStats(name, index) + "!\n"
                     index += 1   
             if(index == 10):
                 break

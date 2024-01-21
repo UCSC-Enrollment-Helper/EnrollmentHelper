@@ -1,3 +1,4 @@
+/*
 // Listen for messages from the content script
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "result") {
@@ -12,3 +13,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   return true;
 });
 //chrome.runtime.sendMessage({type: "result", data: resu})
+*/
