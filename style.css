@@ -2,32 +2,29 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #322968;
     height: 40rem;
     width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-h1 {
-    color: #333;
+h2 {
+    color: #02864a;
 }
 
-input {
-    padding: 8px;
-    margin: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* Common styles for the sections */
+.section {
+    width: 100%;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+/* Styles for the "rating" section */
+.rating {
+    text-align: left;
 }
 
-button:hover {
-    background-color: #45a049;
+/* Styles for the "reviews" section */
+.reviews {
+    text-align: left;
 }
