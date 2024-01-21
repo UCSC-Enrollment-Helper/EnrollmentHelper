@@ -18,6 +18,7 @@ if response.status_code == 200:
 
     # Find the div using BeautifulSoup
     target_div = soup.select_one(div_selector)
+    print("dsadsa",target_div)
 
     # Check if the div is found
     if target_div:
