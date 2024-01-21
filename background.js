@@ -9,5 +9,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     // Display the result in the reviews section
     reviewsSection.innerHTML = message.data;
   }
+  return true;
 });
-chrome.runtime.sendMessage({type: "result", data: result.result})
+//chrome.runtime.sendMessage({type: "result", data: resu})

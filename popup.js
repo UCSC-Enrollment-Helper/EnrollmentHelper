@@ -1,12 +1,16 @@
+document.addEventListener('DOMContentLoaded', function() {
+    chrome.storage.local.get("key", function(result) {
+        if (result.key) {
+            console.log("Data retrieved from storage:", result.key);
+            // Do something with result.key
+            const resultContainer = document.getElementById('reviews');
+            resultContainer.innerHTML = result.key
+        }
+    });
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.type === "result") {
-      // Assuming message.data contains the HTML or text you want to display
-      const res = message.data
-      console.log(res)
-      let resultContainer = document.getElementById('reviews');
-      resultContainer.innerHTML = res
-      // Display the result in the reviews section
-      reviewsSection.innerHTML = message.data;
-    }
-  });
+    // Optional: Clear the storage after retrieving the data
+    chrome.storage.local.remove("key", function() {
+        console.log("Data removed from storage");
+    });
+});
+

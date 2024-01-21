@@ -17,7 +17,10 @@ if (window.location.href.indexOf("catalog.ucsc.edu") !== -1) {
     console.log(result);
     // You can handle the result as needed
     console.log(result.result)
-    chrome.runtime.sendMessage({type: "result", data: result.result})
+    //chrome.runtime.sendMessage({type: "result", data: result.result})
+    chrome.storage.local.set({ "key": result.result }, function() {
+      console.log("Data saved to storage");
+  });
   })
     // Wait and ensure popup has loaded 
     /*
