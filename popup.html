@@ -3,19 +3,18 @@
 <head>
     <title>Enrollment Helper</title>
     <link rel="stylesheet" href="style.css">
+    <script src = "popup.js"></script>
 </head>
 <body>
     <h1>Enrollment Helper</h2>
 
     <!-- "Professor" section -->
-    <div class="section rating">
+    <div id="reviews" class="section rating">
         <h2>Professor Name:</h2>
     </div>
 
     <!-- "rating" section -->
-    <div class="section rating">
-        <h2>Ratings:</h2>
-        <p>Stars</p>
+    <div id="resultContainer">hi
     </div>
 
     <!-- "reviews" section -->
@@ -26,6 +25,14 @@
         <p>Third rating</p>
     </div>
 
-    <script src="popup.js"></script>
+    <!-- <script src="content.js"></script> -->
+    <!--
+    <script>
+        window.onload = function() {
+            const p = document.getElementById('resultContainer')
+            console.log(p)
+        };
+    </script>
+    -->
 </body>
 </html>

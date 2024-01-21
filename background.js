@@ -1,13 +1,13 @@
-chrome.runtime.onInstalled.addListener(function () {
-    console.log("Extension installed");
-  });
-  
-  chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    if (request.message === "check_url") {
-      console.log("Received message from content script. Initiating Python script execution...");
-  
-      // Send a request to the server to run the Python script
-      
-    }
-  });
-  
+// Listen for messages from the content script
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === "result") {
+    // Assuming message.data contains the HTML or text you want to display
+    const res = message.data
+    console.log("dsadsadsadsa",res)
+    let resultContainer = document.getElementById('reviews');
+    resultContainer.innerHTML = res
+    // Display the result in the reviews section
+    reviewsSection.innerHTML = message.data;
+  }
+});
+chrome.runtime.sendMessage({type: "result", data: result.result})

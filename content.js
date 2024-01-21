@@ -1,5 +1,6 @@
-console.log("Content script running");
 
+
+console.log("Content script running");
 // Check if the current URL contains "catalog.ucsc.edu"
 if (window.location.href.indexOf("catalog.ucsc.edu") !== -1) {
   console.log("You are on the right page. Sending message to background script...");
@@ -15,8 +16,21 @@ if (window.location.href.indexOf("catalog.ucsc.edu") !== -1) {
   .then(result => {
     console.log(result);
     // You can handle the result as needed
+    console.log(result.result)
+    chrome.runtime.sendMessage({type: "result", data: result.result})
   })
-  .catch(error => console.error('Error executing Python script:', error));
+    // Wait and ensure popup has loaded 
+    /*
+    console.log("finished waiting")
+    const resultContainer = doc.getElementById('reviews');
+    console.log(resultContainer)
+    resultContainer.innerHTML = `
+      <h2>Ratings:</h2>
+      <p>${result.result}</p>
+    `;
+    */
+  
+  //.catch(error => console.error('Error executing Python script:', error));
 
 } else {
   console.log("You are not on the right page");

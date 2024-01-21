@@ -5,7 +5,7 @@ body {
     background-color: #322968; /* Dark purple background */
     color: #ffffff; /* Light text for readability */
     height: 40rem; /* Full height of the popup */
-    width: 30rem /* Full width of the popup */
+    width: 30rem; /* Full width of the popup */
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Center alignment for all content */
