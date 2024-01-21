@@ -1,18 +1,11 @@
 /* style.css */
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'ABeeZee', sans-serif;
     background-color: #322968; /* Dark purple background */
     color: #ffffff; /* Light text for readability */
-    height: 40rem; /* Full height of the popup */
-    width: 30rem /* Full width of the popup */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Center alignment for all content */
-    padding: 20px; /* Padding inside the popup */
-    box-sizing: border-box; /* Prevents padding from expanding beyond the set width and height */
-    border-radius: 10px; /* Rounded corners for the popup */
-    overflow: hidden; /* Ensures nothing spills out the rounded corners */
+    height: 40rem; /* Height of the popup */
+    width: 30rem; /* Width of the popup */
 }
 
 h1, h2 {
@@ -25,12 +18,23 @@ h1 {
     text-align: center; /* Center the main title */
 }
 
-/* Hover effect for headings */
+/* Hover effect for headings
 h1:hover, h2:hover {
-    color: #4FFFB0; /* Lighter shade of green for hover */
-    cursor: pointer; /* Changes cursor to indicate interactivity */
-    text-decoration: underline; /* Underlines text on hover */
-    transition: color 0.3s ease; /* Smooth transition for the color change */
+    color: #4FFFB0; // Lighter shade of green for hover
+    cursor: pointer; // Changes cursor to indicate interactivity
+    text-decoration: underline; // Underlines text on hover
+    transition: color 0.3s ease; // Smooth transition for the color change
+}
+*/
+.professors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Center alignment for all content */
+    padding: 20px; /* Padding inside the popup */
+    box-sizing: border-box; /* Prevents padding from expanding beyond the set width and height */
+    border-radius: 10px; /* Rounded corners for the popup */
+    overflow: hidden; /* Ensures nothing spills out the rounded corners */
+    border-top: 3px solid #000; /* Thin black line above each section */
 }
 
 /* Common styles for the sections */
